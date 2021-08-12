@@ -49,7 +49,7 @@ router.post('/', upload.single('image'), (req, res, next) => {
 
     const postimage = async() => {
         try {
-    
+
             ig.state.generateDevice(IG_USERNAME);
             await ig.simulate.preLoginFlow();
             const user = await ig.account.login(IG_USERNAME, IG_PASSWORD);

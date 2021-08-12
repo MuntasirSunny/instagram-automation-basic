@@ -7,6 +7,7 @@ const morgan = require('morgan');
 
 //Routes
 const publishpost = require('./api/routes/publishpost');
+const followersfeed = require('./api/routes/followersfeed');
 
 //console.log(process.env.DB_PASS);
 // mongoose.connect(process.env.MONGO_CONNECT, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -35,6 +36,7 @@ app.use((req, res, next) => {
 
 //Routes
 app.use('/publish-post', publishpost);
+app.use('/followers-feed', followersfeed);
 
 
 app.use((req, res, next) => {
