@@ -7,8 +7,6 @@ router.post('/', (req, res, next) => {
 
     const IG_USERNAME = req.body.user_name;
     const IG_PASSWORD = req.body.user_password;
-    // const IG_USERNAME = "muntasir_sunny";
-    // const IG_PASSWORD = "multiverse@1234";
 
     const followersfeed = async() => {
         try {
